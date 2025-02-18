@@ -61,7 +61,7 @@ function Celcius(divHide, select, text, flip) {
   toFlip.style.rotate = "0deg";
   fromFlip.style.rotate = "0deg";
 
-  output.textContent = convert(fromVar, toVar, input.value);
+  output.textContent = convert(fromVar, toVar, Number(input.value));
   k = 0;
   l = 0;
 }
@@ -78,7 +78,7 @@ function Fahrenheit(divHide, select, text, flip) {
   flip.style.rotate = "0deg";
   toFlip.style.rotate = "0deg";
   fromFlip.style.rotate = "0deg";
-  output.textContent = convert(fromVar, toVar, input.value);
+  output.textContent = convert(fromVar, toVar, Number(input.value));
 
   k = 0;
   l = 0;
@@ -99,14 +99,14 @@ function Kelvin(divHide, select, text, flip) {
   toFlip.style.rotate = "0deg";
   fromFlip.style.rotate = "0deg";
 
-  output.textContent = convert(fromVar, toVar, input.value);
+  output.textContent = convert(fromVar, toVar, Number(input.value));
 
   k = 0;
   l = 0;
 }
 
 input.addEventListener("input", () => {
-  output.textContent = convert(fromVar, toVar, input.value);
+  output.textContent = convert(fromVar, toVar, Number(input.value));
 });
 
 function convert(from, to, input) {
